@@ -1,16 +1,20 @@
 details {
   padding: 0;
 
-  /* Remove margins for next paragraph */
-  & + p {
+  /* Remove margins for next paragraph it create additional margin */
+  & + p,
+  & + p + p,
+  {
     margin: 0 !important;
   }
 
-  /* Remove margins for next second paragraph */
-  & + p + p {
-    margin: 0 !important;
+  /* Hide brs after details because it create additional margin */
+  & + br,
+  & + br + br,
+  {
+    display: none;
   }
-  
+
   /* More pleasant style for conten block */
   & > div {
     padding-left: 20px;
