@@ -1,6 +1,29 @@
 details {
-  padding: 1em 0;
+  padding: 0;
 
+  /* Remove margins for next paragraph */
+  & + p {
+    margin: 0 !important;
+  }
+
+  /* Remove margins for next second paragraph */
+  & + p + p {
+    margin: 0 !important;
+  }
+  
+  /* More pleasant style for conten block */
+  & > div {
+    padding-left: 20px;
+    border-left: 1px solid #B7B7F9;
+    margin: 0 0px 10px;
+    padding-bottom: 5px;
+  }
+  
+  /* Remove outline from summary block */
+  summary:focus {
+    outline: none;
+  }
+  
   summary {
     cursor: pointer;
     display: block;
